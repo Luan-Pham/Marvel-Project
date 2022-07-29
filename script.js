@@ -18,7 +18,6 @@ function search() {
   console.log(searchValue);
   const ts = Number(new Date());
   const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
-  // console.log(hash);
   var characterURL =
     "https://gateway.marvel.com:443/v1/public/characters?ts=" +
     ts +
@@ -29,45 +28,37 @@ function search() {
     "&hash=" +
     hash;
 
-  // fetch(characterURL)
-  //   .then((response) => response.json())
-  //   .then((data) => console.log(data));
-
   fetch(characterURL)
     .then((response) => response.json())
     .then(function (data) {
       console.log(data);
       console.log(data.data.results[0].thumbnail)
+      console.log(data.data.results[0].id)
       setImage(data)
+      setDetails(data)
+      setComics(data)
+      setWiki(data)
     });
 }
 
 var setImage = function(data){
-  $("#thumbnail").attr('src', data.data.results[0].thumbnail.path + "/detail.jpg")
+  $("#thumbnail").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")
 }
-// function searchComics() {
-//   var searchValue = document.getElementById("searchInput").value;
-//   console.log(searchValue);
-//   const ts = Number(new Date());
-//   const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
-//   console.log(hash);
-//   var characterURL =
-//     "https://gateway.marvel.com:443/v1/public/characters/" +
-//     searchValue +
-//     "/comics?ts=" +
-//     ts +
-//     "&apikey=" +
-//     PUBLIC_KEY +
-//     "&hash=" +
-//     hash;
 
-//   fetch(characterURL)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
+var setDetails = function(data){
+  $('#charDescription').html(data.data.results[0].description)
+}
 
-//   const parsedData = JSON.parse(data);
-// }
+var setComics = function(data){
+  $('#comicsLink').attr('href', data.data.results[0].urls[2].url)
+}
+
+var setWiki = function(data){
+  $('#wikiLink').attr('href', data.data.results[0].urls[1].url)
+}
 
 submitBtn.addEventListener("click", search);
 
 // https://gateway.marvel.com:443/v1/public/characters/Thor/comics?apikey=331a8e964a4e496298bdfa8a074e7db6
+
+//character ID range 1009301-1009726

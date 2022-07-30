@@ -13,17 +13,14 @@ const PRIVATE_KEY = "52a651da90a98a4375effb2030b8e3e359d9395e";
 var marvelAPI = "https://gateway.marvel.com:443";
 
 function search() {
-  var picture = document.getElementById("thumbnail");
-  var searchValue = document.getElementById("searchInput").value;
-  console.log(searchValue);
+  let charID = Math.floor(Math.random() * (1009726-1009301) + 1009301);
+  console.log(charID);
   const ts = Number(new Date());
   const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
   console.log(hash)
   var characterURL =
-    "https://gateway.marvel.com:443/v1/public/characters?ts=" +
+    "https://gateway.marvel.com:443/v1/public/characters/"+ charID + "?ts=" +
     ts +
-    "&name=" +
-    searchValue +
     "&apikey=" +
     PUBLIC_KEY +
     "&hash=" +
@@ -41,9 +38,10 @@ function search() {
       setWiki(data)
     });
 }
+search()
 
 var setImage = function(data){
-  $("#thumbnail").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")
+  $("#characters").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")
 }
 
 var setDetails = function(data){
@@ -57,8 +55,6 @@ var setComics = function(data){
 var setWiki = function(data){
   $('#wikiLink').attr('href', data.data.results[0].urls[1].url)
 }
-
-submitBtn.addEventListener("click", search);
 
 // https://gateway.marvel.com:443/v1/public/characters/Thor/comics?apikey=331a8e964a4e496298bdfa8a074e7db6
 

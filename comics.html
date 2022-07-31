@@ -11,29 +11,50 @@
 
 <body>
   <header>
-    <h1>Title</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./Assets/html/movies.html">Movies</a>
-                </li>
-                <li>
-                    <a href="./Assets/html/comics.html">Comics</a>
-                </li>
-                <li>
-                    <a href="./Assets/html/characters.html">Characters</a>
-                </li>
-            </ul>
-        </nav>
+    <h1>Comics</h1>        
   </header>
 
   <main>
+<div class="inline">
+    <input type="text" class="input is-rounded" name="character" id="searchInput" />
+    <button class="button is-black inline" id="searchBtn">Search</button>
+</div>
 
-  </main>
+</main>
+<div class="tile is-parent">
+    <article class="tile is-child notification is-info">
+        <p class="title" id="title1">Middle tile</p>
+        <p class="subtitle" id="sum1">With an image</p>
+        <figure class="image is-4by3">
+          <img src="https://bulma.io/images/placeholders/640x480.png" id="comic1">
+        </figure>
+        <a id="link1">Check out this comic!</a>  
+      </article>
+      <article class="tile is-child notification is-info">
+        <p class="title" id="title2">Middle tile</p>
+        <p class="subtitle" id="sum2">With an image</p>
+        <figure class="image is-4by3">
+          <img src="https://bulma.io/images/placeholders/640x480.png" id="comic2">
+        </figure>
+        <a id="link2">Check out this comic!</a> 
+      </article>
+    <article class="tile is-child notification is-info">
+      <p class="title" id="title3">Middle tile</p>
+      <p class="subtitle" id="sum3">With an image</p>
+      <figure class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/640x480.png" id="comic3">
+      </figure>
+      <a id="link2">Check out this comic!</a> 
+    </article>
+  </div>
+  
 
   <footer>
     
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Assets\javascript\md5.min.js"></script>
+  <script src="Assets\javascript\comics.js"></script>
 </body>
 
 </html>

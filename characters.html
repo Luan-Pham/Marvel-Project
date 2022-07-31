@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="Assets\css\style.css" />
+    <title>Characters</title>
+  </head>
+  <body>
+    <h1>Character Profile Page</h1>
+    <div>
+      <p>Search name of a character</p>
+      <input type="text" name="character" id="searchInput" />
+      <p class="result" id="sampleResult"></p>
+      <button class="btn btn-primary" id="searchBtn">Search</button>
+      <section class="card">
+      <img src="http://i.annihil.us/u/prod/marvel/i/mg/6/00/5130f06bd981b/portrait_uncanny.jpg" alt="Image of searched hero" id="thumbnail" />
+      </section>
+      <div id="charDescription">Placeholder character description</div>
+      <a id="comicsLink">Placerholder link to comics</a>
+      <br>
+      <a id="wikiLink">Placerholder link to wiki</a>
+
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="Assets\javascript\md5.min.js"></script>
+  <script src="Assets\javascript\character.js"></script>
+</html>

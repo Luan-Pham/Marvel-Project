@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #d9dcd6;
+  background-color:black;
 }
 
 header {
@@ -65,65 +65,15 @@ main {
 }
 
 img {
-  
   padding: 50px;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Bangers);
-
-body{
-  background:#fff;
-  font-family: 'Bangers', cursive;
-  font-size: 25px;
-}
-.box{
-  margin:25px;
-  width:250px;
-  height:250px;
-  background:#fff;
-  border: solid black;
-  border-color: black;
-  float:left; 
-}
-
-.box1{
-  border-width: 3px 4px 3px 5px;
-  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
-  transform: rotate(2deg);
-}
-.box2{
-  width:350px;
-  border-width: 3px 3px 5px 5px;
-  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
-  transform: rotate(-2deg);
-}
-
-.box3{
-  border-width: 5px 3px 3px 5px;
-  border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
-  transform: rotate(2deg);
-}
-
-.oddboxinner{
-  margin:15px;
-  transform: rotate(-2deg);
-}
-.evenboxinner{
-  transform: rotate(2deg);
-  margin:15px;
-  padding:0 5px;
-  float:right;
-  background:#ddd;
-  border:1px solid #222;
-  box-shadow:3px 3px 0 #222;
 }
 
 #searchInput {
   border:#BA4A00 solid;
   border-width: .2em;
-  border-radius: .7em 0 0 .7em;
+  border-radius: .7em;
   padding: .2em .2em .2em .5em;
-  width: 450px;
+  width: 800px;
   font-size:x-large;
 }
 
@@ -135,6 +85,7 @@ body{
   font-size:xx-large;
   border-radius:10%;
   height:60px;
+  background-color: grey;
 
 }
 
@@ -146,6 +97,8 @@ body{
   border:3px solid #222;
   box-shadow:3px 3px 0 #222;
   /* border-radius:98% 98% 98% 98%; */
+  justify-content: space-between;
+  display:block;
 }
 
 

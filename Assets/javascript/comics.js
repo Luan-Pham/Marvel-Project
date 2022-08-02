@@ -51,21 +51,21 @@ function search() {
 
 
 var setComic1 = function(data){
-  $("#comic1").attr('src', data.data.results[0].thumbnail.path + "/detail.jpg")
+  $("#comic1").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")
   $("#title1").text(data.data.results[0].title)
   $("#sum1").text(data.data.results[0].description)
   $("#link1").attr('href', data.data.results[0].urls[0].url)
 }
 
 var setComic2 = function(data){
-    $("#comic2").attr('src', data.data.results[1].thumbnail.path + "/detail.jpg")
+    $("#comic2").attr('src', data.data.results[1].thumbnail.path + "/portrait_uncanny.jpg")
     $("#title2").text(data.data.results[1].title)
     $("#sum2").text(data.data.results[1].description)
     $("#link2").attr('href', data.data.results[1].urls[0].url)
   }
 
   var setComic3 = function(data){
-    $("#comic3").attr('src', data.data.results[2].thumbnail.path + "/detail.jpg")
+    $("#comic3").attr('src', data.data.results[2].thumbnail.path + "/portrait_uncanny.jpg")
     $("#title3").text(data.data.results[2].title)
     $("#sum3").text(data.data.results[2].description)
     $("#link3").attr('href', data.data.results[2].urls[0].url)

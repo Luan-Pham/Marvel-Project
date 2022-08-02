@@ -71,9 +71,9 @@ img {
 #searchInput {
   border:#BA4A00 solid;
   border-width: .2em;
-  border-radius: .7em 0 0 .7em;
+  border-radius: .7em;
   padding: .2em .2em .2em .5em;
-  width: 450px;
+  width: 800px;
   font-size:x-large;
 }
 
@@ -96,6 +96,8 @@ img {
   border:3px solid #222;
   box-shadow:3px 3px 0 #222;
   /* border-radius:98% 98% 98% 98%; */
+  justify-content: space-between;
+  display:block;
 }
 
 

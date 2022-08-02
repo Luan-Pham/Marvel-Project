@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comics</title>
+  <title>placeholder</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="../css/comics.css"/>
-
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
 
 <body>
@@ -17,16 +16,13 @@
 
   <main>
 <div class="inline">
-    <input type="text" class="input is-rounded" name="character" id="searchInput" />
-    <button class="button is-black inline" id="searchBtn">Search</button>
+    <input type="text" class="input is-rounded" name="character" id="searchInput" placeholder="Search Comics">
+    <button class="btn btn-primary" type="button" id="searchBtn">Search</button>
 </div>
 
 </main>
 <div class="tile is-parent">
-    
-
-    <div class="evenboxinner">
-  <article class="tile is-child notification is-info">
+    <article class="tile is-child notification is-info">
         <p class="title" id="title1">Middle tile</p>
         <p class="subtitle" id="sum1">With an image</p>
         <figure class="image is-4by3">
@@ -34,9 +30,6 @@
         </figure>
         <a id="link1">Check out this comic!</a>  
       </article>
-      </div>
-
-      <div class="oddboxinner">
       <article class="tile is-child notification is-info">
         <p class="title" id="title2">Middle tile</p>
         <p class="subtitle" id="sum2">With an image</p>
@@ -45,9 +38,6 @@
         </figure>
         <a id="link2">Check out this comic!</a> 
       </article>
-      </div>
-
-      <div class="evenboxinner">
     <article class="tile is-child notification is-info">
       <p class="title" id="title3">Middle tile</p>
       <p class="subtitle" id="sum3">With an image</p>
@@ -56,18 +46,16 @@
       </figure>
       <a id="link2">Check out this comic!</a> 
     </article>
-    </div>
-    
   </div>
-
+  
 
   <footer>
-    
+    <img src="..\images\banner.png" alt="marvel banner">
   </footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="..\javascript\md5.min.js"></script>
   <script src="..\javascript\comics.js"></script>
-
 </body>
 
 </html>

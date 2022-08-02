@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #d9dcd6;
+  background-color:black;
 }
 
 header {
@@ -65,9 +65,39 @@ main {
 }
 
 img {
-  
   padding: 50px;
 }
+
+#searchInput {
+  border:#BA4A00 solid;
+  border-width: .2em;
+  border-radius: .7em 0 0 .7em;
+  padding: .2em .2em .2em .5em;
+  width: 450px;
+  font-size:x-large;
+}
+
+#searchBtn {
+  margin: 0 auto;
+  text-align:center;
+  width:195px;
+  font-weight:bold;
+  font-size:xx-large;
+  border-radius:10%;
+  height:60px;
+
+}
+
+.tile{
+  margin:15px;
+  /* transform: rotate(2deg); */
+  padding:5px 10px;
+  /* float:right; */
+  border:3px solid #222;
+  box-shadow:3px 3px 0 #222;
+  /* border-radius:98% 98% 98% 98%; */
+}
+
 
 @media screen and (max-width: 768px) {
   header {

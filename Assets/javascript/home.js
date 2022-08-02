@@ -42,6 +42,7 @@ function search() {
       fetch(comicURL)
       .then ((response) => response.json())
       .then (function (data) {
+        console.log(data)
         setComic(data);
       })
   
@@ -53,13 +54,15 @@ search()
 
 var setCharacter = function(data){
     $("#characters").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")
+    $("#characterName").text(data.data.results[0].name)
 }
 var setDetails = function(data){
   $('#charDescription').html(data.data.results[0].description)
 }
-
 var setComic = function(data){
-  $("#comics").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")}
+  $("#comics").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")
+  $("#comicTitle").text(data.data.results[0].title)
+}
 
 var setWiki = function(data){
   $('#wikiLink').attr('href', data.data.results[0].urls[1].url)

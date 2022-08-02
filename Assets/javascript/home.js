@@ -45,6 +45,16 @@ function search() {
         console.log(data)
         setComic(data);
       })
+  var characterName = data.data.results[0].name
+  console.log(characterName)
+  var movieURL = "https://api.themoviedb.org/3/search/movie?api_key=287dc70aa17f7ea83559b0c661966d3e&language=en-US&page=1&include_adult=false&query=" + characterName
+  fetch(movieURL)
+      .then ((response) => response.json())
+      .then (function(data) {
+        if (data == undefined){($('movies').attr('src', 'https://www.thetruecolors.org/wp-content/uploads/2021/02/marvel-logo-header-1.jpg'))}
+        else {$('#movies').attr('src',"https://image.tmdb.org/t/p/original" + data.results[0].poster_path)
+        $('#movieTitle').text(data.results[0].title)}
+      })
   
     
   })}

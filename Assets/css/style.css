@@ -118,3 +118,15 @@ img {
 
 .inline {
 display: inline;}
+
+.image-contain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:300px;
+  height: 450px;
+}
+
+.movie-display{
+  align-self: center;
+}

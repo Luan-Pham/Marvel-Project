@@ -81,10 +81,6 @@ img {
 }
 
 #searchInput {
-  border:#BA4A00 solid;
-  border-width: .2em;
-  border-radius: .7em;
-  padding: .2em .2em .2em .5em;
   width: 800px;
   font-size:x-large;
 }

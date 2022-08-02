@@ -51,8 +51,9 @@ function search() {
   fetch(movieURL)
       .then ((response) => response.json())
       .then (function(data) {
-        if (data == undefined){($('movies').attr('src', 'https://www.thetruecolors.org/wp-content/uploads/2021/02/marvel-logo-header-1.jpg'))}
-        else {$('#movies').attr('src',"https://image.tmdb.org/t/p/original" + data.results[0].poster_path)
+        console.log(data)
+        if (data.results.length == 0){($('#movies').attr('src', 'https://www.thetruecolors.org/wp-content/uploads/2021/02/marvel-logo-header-1.jpg'))}
+        else {$('#movies').attr('src',"https://image.tmdb.org/t/p/w342" + data.results[0].poster_path)
         $('#movieTitle').text(data.results[0].title)}
       })
   

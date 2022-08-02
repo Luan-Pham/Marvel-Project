@@ -33,16 +33,16 @@ header nav ul li {
 }
 
 li a {
-  color: #ff361c;
+  color: #485fc7;
   text-decoration: none;
 }
 
 li a:visited {
-  color: #ff361c;
+  color: #485fc7;
 }
 
 li a:hover  {
-  color: #ea2308;
+  color: #485fc7;
 }
 
 li a:active {
@@ -119,14 +119,8 @@ img {
 .inline {
 display: inline;}
 
-.image-contain{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width:300px;
-  height: 450px;
-}
-
-.movie-display{
-  align-self: center;
+.banner{
+  width: 100%;
+    height: 100%; 
+    object-fit: contain;
 }

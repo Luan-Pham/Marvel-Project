@@ -27,11 +27,28 @@ function search() {
       console.log(data.data.results[0].thumbnail)
       console.log(data.data.results[0].id)
       setCharacter(data)
-      setDetails(data)
-      setComics(data)
-      setWiki(data)
     });
-}
+    fetch(characterURL)
+    .then((response) => response.json())
+    .then(function (data) {
+      var comicURL =  "https://gateway.marvel.com:443/v1/public/characters/" +
+      charID +
+      "/comics?ts=" +
+      ts +
+      "&apikey=" +
+      PUBLIC_KEY +
+      "&hash=" +
+      hash;
+      fetch(comicURL)
+      .then ((response) => response.json())
+      .then (function (data) {
+        setComic(data);
+      })
+  
+    
+  })}
+
+
 search()
 
 var setCharacter = function(data){
@@ -41,10 +58,8 @@ var setDetails = function(data){
   $('#charDescription').html(data.data.results[0].description)
 }
 
-
-var setComics = function(data){
-  $('#comicsLink').attr('href', data.data.results[0].urls[2].url)
-}
+var setComic = function(data){
+  $("#comics").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")}
 
 var setWiki = function(data){
   $('#wikiLink').attr('href', data.data.results[0].urls[1].url)

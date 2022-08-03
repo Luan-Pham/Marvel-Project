@@ -50,11 +50,7 @@ main {
   background: #13293d;
   display: flex;
   flex-wrap: wrap;
-<<<<<<< HEAD
   width: 100%;
-=======
-  width:100%;
->>>>>>> 67d4ab6e3552e90fb261cc35ccdef1483a11174d
 }
 
 .home-link {
@@ -140,6 +136,9 @@ img {
 
 @media screen and (max-width: 768px) {
   header {
+    flex-direction: column;
+  }
+  .card{
     flex-direction: column;
   }
   .inline {

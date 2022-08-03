@@ -27,26 +27,22 @@ header nav {
   font-size: 20px;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-}
-
-li a {
-  color: #485fc7;
+nav h1 a{
+  color: #3e8ed0;
   text-decoration: none;
+  display: inline-block;
+  margin-left: 50px;
 }
 
-li a:visited {
-  color: #485fc7;
+nav h1 a:visited {
+  color: #3e8ed0;
 }
 
-li a:hover  {
-  color: #485fc7;
+nav h1 a:hover  {
+  color: #3e8ed0;
 }
 
-li a:active {
-  font-size: 18px;
+nav h1 a:active {
   text-decoration: underline;
 }
 
@@ -54,6 +50,10 @@ main {
   background: #13293d;
   display: flex;
   flex-wrap: wrap;
+}
+
+.home-link {
+  color: #3e8ed0;
 }
 
 .card {

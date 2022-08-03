@@ -87,6 +87,13 @@ main {
   font-size:50px;
 }
 
+.about-character {
+  margin-top: 30%;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
 img {
   padding: 50px;
 }
@@ -136,12 +143,12 @@ img {
   .card{
     flex-direction: column;
   }
-  .inline {
-    flex-direction: column;
-  }
   #searchBtn {
     margin: 0;
     width: 100px;
+  }
+  .inline {
+    flex-direction: column;
   }
 }
 

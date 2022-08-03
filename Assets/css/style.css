@@ -53,6 +53,10 @@ main {
   width: 100%;
 }
 
+.footer{
+  background-color:black;
+  height: 100%;
+}
 .card {
   width: 100%;
   padding: 10px;

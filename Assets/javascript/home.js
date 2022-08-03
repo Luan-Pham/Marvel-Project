@@ -52,7 +52,7 @@ function search() {
       .then ((response) => response.json())
       .then (function(data) {
         console.log(data)
-        if (data.results.length == 0){($('#movies').attr('src', 'https://www.thetruecolors.org/wp-content/uploads/2021/02/marvel-logo-header-1.jpg'))}
+        if (data.results.length == 0){($('#movies').attr('src', 'http://x.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/portrait_uncanny.jpg'))}
         else {$('#movies').attr('src',"https://image.tmdb.org/t/p/w342" + data.results[0].poster_path)
         $('#movieTitle').text(data.results[0].title)}
       })

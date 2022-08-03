@@ -50,7 +50,11 @@ main {
   background: #13293d;
   display: flex;
   flex-wrap: wrap;
+<<<<<<< HEAD
   width: 100%;
+=======
+  width:100%;
+>>>>>>> 67d4ab6e3552e90fb261cc35ccdef1483a11174d
 }
 
 .home-link {
@@ -116,6 +120,7 @@ img {
   justify-content: space-between;
   display:block;
   text-align: center;
+  grid-gap: 20px;
 }
 
 .inline {

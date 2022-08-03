@@ -87,9 +87,10 @@ main {
   font-size:50px;
 }
 
-.about-character {
+.about-character{
+  font-size: xx-large;
+  color:#3e8ed0;
   margin-top: 30%;
-  font-size: large;
   display: flex;
   flex-direction: column;
 }
@@ -136,10 +137,7 @@ img {
   object-fit: contain;
 }
 
-.about-character{
-  font-size: xx-large;
-  color:#3e8ed0;
-}
+
 
 @media screen and (max-width: 768px) {
   header {

@@ -133,6 +133,11 @@ img {
   object-fit: contain;
 }
 
+.about-character{
+  font-size: xx-large;
+  color:#3e8ed0;
+}
+
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;

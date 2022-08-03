@@ -50,6 +50,7 @@ main {
   background: #13293d;
   display: flex;
   flex-wrap: wrap;
+  width:100%;
 }
 
 .home-link {
@@ -94,8 +95,6 @@ img {
   height:60px;
 }
 
-
-
 .tile{
   margin:15px;
   /* transform: rotate(2deg); */
@@ -107,6 +106,7 @@ img {
   justify-content: space-between;
   display:block;
   text-align: center;
+  grid-gap: 20px;
 }
 
 

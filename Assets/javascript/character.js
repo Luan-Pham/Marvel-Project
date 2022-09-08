@@ -15,10 +15,10 @@ var marvelAPI = "https://gateway.marvel.com:443";
 function search() {
   var picture = document.getElementById("thumbnail");
   var searchValue = document.getElementById("searchInput").value;
-  console.log(searchValue);
+  // console.log(searchValue);
   const ts = Number(new Date());
   const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
-  console.log(hash)
+  // console.log(hash)
   var characterURL =
     "https://gateway.marvel.com:443/v1/public/characters?ts=" +
     ts +
@@ -32,30 +32,33 @@ function search() {
   fetch(characterURL)
     .then((response) => response.json())
     .then(function (data) {
-      console.log(data);
-      console.log(data.data.results[0].thumbnail)
-      console.log(data.data.results[0].id)
-      setImage(data)
-      setDetails(data)
-      setComics(data)
-      setWiki(data)
+      // console.log(data);
+      // console.log(data.data.results[0].thumbnail)
+      // console.log(data.data.results[0].id)
+      setImage(data);
+      setDetails(data);
+      setComics(data);
+      setWiki(data);
     });
 }
 
-var setImage = function(data){
-  $("#thumbnail").attr('src', data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg")
-}
+var setImage = function (data) {
+  $("#thumbnail").attr(
+    "src",
+    data.data.results[0].thumbnail.path + "/portrait_uncanny.jpg"
+  );
+};
 
-var setDetails = function(data){
-  $('#charDescription').html(data.data.results[0].description)
-}
+var setDetails = function (data) {
+  $("#charDescription").html(data.data.results[0].description);
+};
 
-var setComics = function(data){
-  $('#comicsLink').attr('href', data.data.results[0].urls[2].url)
-}
+var setComics = function (data) {
+  $("#comicsLink").attr("href", data.data.results[0].urls[2].url);
+};
 
-var setWiki = function(data){
-  $('#wikiLink').attr('href', data.data.results[0].urls[1].url)
-}
+var setWiki = function (data) {
+  $("#wikiLink").attr("href", data.data.results[0].urls[1].url);
+};
 
 submitBtn.addEventListener("click", search);
